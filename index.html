@@ -129,8 +129,8 @@
 
                                <div class="btn-group-toggle" data-toggle="buttons">
                                 <label for="section" class="col-form-label" style="color: black;" > Section</label>             
-                   <button type="button" class="text-white active offset-2" style="background-color: #4CAF50;"> Non-Smoking</button>
-                <button type="button" class="text-white " style="background-color: #f44336;"> Smoking</button>
+                   <button type="button" class="btn btn-success text-white active offset-2"> Non-Smoking</button>
+                <button type="button" class="btn btn-danger text-white" > Smoking</button>
                             </div>
                                                                                
                      <div class="form-group row mt-4 ">                           
@@ -210,6 +210,10 @@
                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger" id="carousel-pause"><span class="fa fa-pause"></span></button>
+                        <button class="btn btn-danger" id="carousel-play"><span class="fa fa-play"></span></button>
+                    </div>
                 </div>
             </div>
             </div>
@@ -311,5 +315,17 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+       $('#mycarousel').carousel({interval:2000});
+       $('#carousel-pause').click(function() {
+       $('#mycarousel').carousel('pause');
+       });
+       $('#carousel-play').click(function(){
+           $('#mycarousel').carousel('cycle');
+       });
+    });
+
+</script>
 </body>
 </html>

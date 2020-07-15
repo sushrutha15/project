@@ -52,6 +52,8 @@ body{
 h4{
     color: #0f0f0f;
 }
-.guests{
-    color: #0f0f0f;
+#carouselButton{
+    right:0px;
+    bottom: 0px;
+    position: absolute;
 }
