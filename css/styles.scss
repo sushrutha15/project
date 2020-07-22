@@ -74,3 +74,23 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+
+#reserve-head {
+    background:$background-dark;
+    #reserve-body{
+        background: $background-pale;
+    }
+}
+
+.modal-header {
+    background:$background-dark;
+    .close {
+        background-color:$background-pale;
+    }
+}
+.modal-body {
+    background: $background-pale;
+}
+.modal-title {
+    color: floralwhite;
+}
