@@ -16,8 +16,8 @@
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #9575CD;
-  color: floralwhite;
+  background:#a3b6d9;
+  color: black;
 }
 address {
   font-size: 80%;
@@ -29,7 +29,7 @@ body {
   z-index: 0;
 }
 .navbar-dark {
-  background-color: #512DA8;
+  background-color: #3240a8;
 }
 .tab-content {
   border-left: 1px solid #ddd;
@@ -38,7 +38,7 @@ body {
   padding: 10px;
 }
 .carousel {
-  background: #512DA8;
+  background: #aab0bd;
 }
 .carousel .carousel-item {
   height: 300px;
