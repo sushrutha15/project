@@ -68,3 +68,6 @@ body {
 .modal-title {
   color: white;
 }
+.pointer{
+  cursor: pointer;
+}
