@@ -214,7 +214,7 @@
                     </div>
 
              <div class="carousel-item">
-            <img src="./img/chef.png"  alt="Alberto" class="d-block img fluid">
+            <img src="./img/chef.png"  alt="Alberto" width="400" height="350" class="d-block img fluid">
             <div class="carousel-caption d-none d-md-block">
              <h2>Alberto</h2>
              <h4>Executive Chef</h4>
@@ -250,7 +250,7 @@
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img src="img/pizza.jpg" alt="uthappizza" class="d-flex mr-3 
+                    <img src="img/pizza.jpg" alt="uthappizza"  width="150" height="150" class="d-flex mr-3 
                     img-thumbnail align-self-center">
                     <div class="media-body">
                         <h2 class="mt-0">Uthappizza <span class="badge badge-danger"> HOT</span> 
@@ -271,7 +271,7 @@
                     <h2>Weekend Grand Buffet <span class="badge badge-danger"> NEW</span></h2>
                     <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                    </div>
-                   <img src="img/buffet1.png"  alt="buffet" class="d-flex ml-3 mt-0 img-thumbnail 
+                   <img src="img/buffet1.png"  alt="buffet"  width="200" height="350" class="d-flex ml-3 mt-0 img-thumbnail 
                    align-self-center">
                 </div>
             </div>
@@ -283,7 +283,7 @@
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img src="img/chef.png" alt="Alberto" class="d-flex mr-3 align-self-center 
+                    <img src="img/chef.png" alt="Alberto"  width="200" height="200" class="d-flex mr-3 align-self-center 
                     img-thumbnail" height=auto>
                     <div class="media-body">
                         <h2 class="mt-0">Alberto</h2>
@@ -342,13 +342,64 @@
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="./css/js/scripts.js"></script>
+<script src="js/scripts.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
-<!--endbuild-->   
+<!--endbuild-->  
+<script>
+    $(document).ready(function() {
+       $('#mycarousel').carousel({interval:2000});
+       $('#carouselButton').click(function() {
+           if($('#carouselButton').children('span').hasClass('fa-pause')) {
+            $('#mycarousel').carousel('pause');
+            $('#carouselButton').children('span').removeClass('fa-pause');
+            $('#carouselButton').children('span').addClass('fa-play');
+       }
+       else if($('#carouselButton').children('span').hasClass('fa-play')) {
+            $('#mycarousel').carousel('cycle');
+            $('#carouselButton').children('span').removeClass('fa-play');
+            $('#carouselButton').children('span').addClass('fa-pause');
+       }
+    });
+    });
+</script>
+<script>
+$(document).ready(function() {
+    $('#login-click').click(function() {
+        $('#loginModal').modal('toggle');
+
+         //close button action
+     $('#closeButton').click(function () {
+         $('#loginModal').modal('hide');
+     });
+ 
+     //cancel button action
+     $('#cancelButton').click(function () {
+         $('#loginModal').modal('hide');
+     });
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    $('#reserve').click(function() {
+        $('#testform').modal('toggle');
+
+        //close button action
+  $('#closeButton0').click(function () {
+     $('#testform').modal('hide');
+ });
+ 
+ //cancel button action
+ $('#cancelButton0').click(function () {
+     $('#testform').modal('hide');
+ });
+    });
+});
+</script> 
    
 </body>
 </html>
